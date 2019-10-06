@@ -11,9 +11,10 @@ class Prime
 	ArrayList<Integer> numbers=new ArrayList<Integer>();
     public void initRandom(int n,int m)
     {
+    	Random rand=new Random();
     	for(int i=0;i<=n;i++)
     	{
-    		numbers.add((int)(Math.random()*m));
+    		numbers.add(rand.nextInt(m)+1000);
     	}
     }
     private static boolean isPrime(int p)
