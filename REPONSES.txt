@@ -1,0 +1,56 @@
+﻿GUO Hengyi
+
+
+
+La version de Maven installée sur la Machine est Apache Maven 3.6.0.
+
+
+
+Le paramètre groupeId identifie le projet uniquement parmi tous les projets,
+artifactId signifie le nom du JAR,il définit le path du projet avec groupId.
+
+
+
+Le répertoire target contient les documents créés, les documents d'input et 
+les documents de classes.
+
+
+
+Le class path sert à indiquer le lieu où le document de classe est réservé.
+
+
+
+Le propriété "maven.compiler.target" sert à définir la version de Java avec
+laquelle des classes sont compilées.
+
+On lui donne la valeur de 1.7.
+
+
+
+Il apparaît une erreur:aucun attribut manifest principal dans target/td00-1.0-SNAPSHOT.jar.
+
+
+
+La méthode System.out.println() est remplie automatiquement.
+
+
+
+La classe toString est remplie automatiquement.
+
+
+
+La méthode main(String[] args) est remplie automatiquement.
+
+
+
+La méthode getToto() qui revoie la valeur de toto est remplie automatiquement.
+Et la méthode setToto(int toto) qui modifie la valeur de toto est remplie automatiquement.
+
+
+
+On peut renommer la classe App et le champ toto.
+
+
+
+Le fichier de String.class est ouvert et il nous montre le contenu de la classe de String.
+
