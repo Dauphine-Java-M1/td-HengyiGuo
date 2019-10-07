@@ -54,3 +54,4 @@ On peut renommer la classe App et le champ toto.
 
 Le fichier de String.class est ouvert et il nous montre le contenu de la classe de String.
 
+GGGGGGGG
