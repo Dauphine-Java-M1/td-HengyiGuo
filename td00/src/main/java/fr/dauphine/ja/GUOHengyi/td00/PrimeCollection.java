@@ -6,7 +6,7 @@ package fr.dauphine.ja.GUOHengyi.td00;
  */
 import java.util.*;
 
-class Prime
+public class PrimeCollection
 {
 	ArrayList<Integer> numbers=new ArrayList<Integer>();
     public void initRandom(int n,int m)
@@ -17,12 +17,12 @@ class Prime
     		numbers.add(rand.nextInt(m)+1000);
     	}
     }
-    private static boolean isPrime(int p)
+    public static boolean isPrime(int p)
     {
     	for(int j=2;j<=Math.sqrt(p);j++)
     	{
     		if(p%j==0)
-    			return false;
+    			return false;    		
     	}
     	return true;
     }
@@ -34,12 +34,9 @@ class Prime
     			System.out.println(numbers.get(i)+" est un nombre premier.");
     	}
     }
-}
-public class PrimeCollection 
-{
 	public static void main(String[] args)
     {
-		Prime pm=new Prime();
+		PrimeCollection pm=new PrimeCollection();
 		pm.initRandom(100,1000);
 		pm.printPrimes();
     }
