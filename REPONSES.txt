@@ -2,6 +2,7 @@
 
 
 
+TD00maven:
 La version de Maven installée sur la Machine est Apache Maven 3.6.0.
 
 
@@ -53,5 +54,32 @@ On peut renommer la classe App et le champ toto.
 
 
 Le fichier de String.class est ouvert et il nous montre le contenu de la classe de String.
+---------------------------------------------------------------------------------------------
+TD00bis-git:
+Ex1-5:Les modifications du code sont montrées.
 
-GGGGGGGG
+Ex1-8:
+
+commit acc4f5777bfa8aa27ef93845476aae8bd12dd54a (HEAD -> master)
+Author: GUO Hengyi <matthewg0175@gmail.com>
+Date:   Sun Oct 6 23:32:07 2019 +0200
+
+    Increase random generator upper bound.
+
+commit fd32a492e5b264d0194d6cd2c2e800e5a6d02838
+Author: GUO Hengyi <matthewg0175@gmail.com>
+Date:   Sun Oct 6 22:55:04 2019 +0200
+
+    initial import
+
+Ex2-3:Gitk représente le fait avec des branchs comme "initial import-master-remotes/origin/master".
+
+Ex2-5:La modification apparaît dans le fichier REPONSES.txt du dépot git.
+
+Ex2-6:Le contenu que le fichier REPONSES.txt contient est modifié.Les ajouts du contenu sont marqués en vert avec un "+" et suivis par une notation: "Pas de nouvelle ligne en fin de fichier" qui signifie la fin du nouveau contenu.En plus,cette modification a un parent qui indique sa modification dernière.
+
+Ex2-7:Il y aura un conflit entre le fichier original et le fichier midifié,les modifications ne seront pas accceptées.
+
+Ex3-2: La méthode shouldAnswerWithTrue() est appelée automatiquement et on obtient un bon résutat du test de code sans échecs.
+Après avoir remplacé assertTrue(true) en assertTrue (false) et l'exécuté,le compilateur me revoie une erreur de java.lang.AssertionError de la méthode assertTrue (false) dans le Failure Trace.
+La méthode assertTrue examine si le résultat de fonction de son paramètre est true.
