@@ -1,0 +1,49 @@
+﻿TD01-encapsMuta
+Ex1-1:Parce que x et y sont tous les attributs d'objet p.
+
+Ex1-2:Les champs Point.x et Point.y ne sont pas visibles.On peut modifier le genre de limitation de x et y dans la classe Point comme public.
+
+Ex1-3:Parce que on peut protéger les champs de la classe d'être modifié par les autres classe.
+
+Ex1-4:Un accesseur est une méthode.Non.
+
+Ex1-5:Le constructeur vide de la classe Point ne peut plus être appelé.
+
+Ex1-6:Les valeurs de x et y sont modifiées.
+
+
+
+Ex1-7:On crée un champs privé statique "compteur",et il s'augmente de 1 dans le constructeur pour chaque construction.
+
+
+
+Ex1-8:Le compilateur vas appeler le constrcteur en fonction des paramètres dans les parenthèses.
+
+
+
+Ex2-1:Ce code affiche que le résultat du premier System.out.println est true alors que celui du deuxième est false. Parce que p2 et p1 sont orientés vers le même endroit dans le mémoire avec "p2=p1".Par contre, p1 et p3 ont la même valeur du point mais pas la même référence.
+
+
+
+Ex2-3:La méthode indexOf renvoie -1 pour p3. La méthode equals() est appelée.
+
+
+
+Ex3-2:Si on dépasse la capacité fixée, il aura une exception "ArrayIndexOutOfBoundsException".On peux ajouter des codes de catch à attraper les erreurs et donner des alertes pour ça.
+
+
+Ex3-5:Il lance une exception de NullPointerException.Si on a fait un add(null) avant,ça causera aussi cette exception-là.
+
+Ex3-6:Le contenu de pointCapacity et de nbPoints devient simplement une valeur retournée par la méthode size() de LinkedList et le contenu de contains devient une valeur retournée par la méthode contains() de LinkedList.
+
+Ex4-1:La signature pour cette méthode est void.
+
+Ex4-5:Le code "c2.translate(1,1)" a changé la valeur de p, donc le centre de c a été aussi modifié avec la modification du c2. On crée un autre champs pour le centre de c.
+
+Ex4-6:Le centre du cercle ne peut pas être translaté car il n'existe pas de méthode de translater dans la classe Point.On utilise directement la méthode de translate dans la classe Circle avec cette référence de Circle.
+
+Ex4-9:Oui, on doit le faire comme une méthode statique car cette méthode n'appartient pas à une instance de Point ou de Circle.
+
+Ex5-1:Non car les variables et les méthodes des anneaux et celles des cercles ne sont pas de mêmes.
+
+Ex5-4:Il vas afficher simplement l'addresse dans la mémoire.Il faut récrire la méthode toString() dans la classe Ring.
