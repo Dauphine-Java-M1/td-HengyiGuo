@@ -1,0 +1,5 @@
+Ex1-4: 
+Cette classe r¨¦alise la fonction d'acc¨¨s al¨¦atoire aux listes. On doit impl¨¦menter les m¨¦thodes get(int) et size() parce qu'on veut impl¨¦menter des listes non modifiables. En plus, la classe AbstractList h¨¦rite de la classe AbstractCollection qui d¨¦finie 2 m¨¦thodes abstraites: iterator() et size(), la classe AbstractList a d¨¦j¨¤ r¨¦alis¨¦ iterator() et elle a d¨¦finie de plus une m¨¦thode abstraite get(int). Donc, pour utiliser cette classe, on doit au moins impl¨¦menter get(int) et size().
+
+Ex2-3:
+Le code suivant calcule la complexit¨¦ y compris le temps que chaque appel de mult et le calcul prennent. On peux explicitement voir que le temps que le premier prend est ¨¦norme car c'est un arraylist qui n'a pas de pointeur.
