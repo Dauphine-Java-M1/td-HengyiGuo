@@ -21,7 +21,7 @@ public class Ex5 {
    }
 
    private static void swap(Object[] obj, int i, int j) {
-      if(i >= 0 && j >= 0 && i <= obj.length && j <= obj.length) {
+      if(i >= 0 && j >= 0 && i < obj.length && j < obj.length) {
          Object ele_i = obj[i];
          Object ele_j = obj[j];
          obj[i] = ele_j;
