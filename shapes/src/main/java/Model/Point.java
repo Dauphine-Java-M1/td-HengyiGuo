@@ -1,20 +1,31 @@
-package fr.dauphine.ja.GUOHengyi.shapes;
+package Model;
 
 public class Point
 {
-	public int x,y;
+	private int x,y;
+	public static int c=0;
+	public int count;
 	
 	public Point(int px,int py)
 	{
 		this.x=px;
 		this.y=py;
+		this.count=c;
+		this.count++;
 	}
 	public Point(Point _p)
 	{
 		this.x=_p.x;
 		this.y=_p.y;
+		this.count=c;
+		this.count++;
 	}
 
+	public Point() 
+	{
+		this.x=0;
+		this.y=0;
+	}
 	public boolean isSameAs(Point p)
 	{
 		if((this.x==p.x)&&(this.y==p.y))
@@ -27,7 +38,20 @@ public class Point
 		return this.isSameAs((Point)(obj));
 	}
 	
-	public void translate(int dx,int dy) {};
+	public Point translate(int dx,int dy) 
+	{
+		this.x=dx;
+		this.y=dy;
+		return new Point(this.x,this.y);
+	}
+	public int getX()
+	{
+		return this.x;
+	}
+	public int getY() 
+	{
+		return this.y;
+	}
 	
 	public static void main(String[] args)
 	{
