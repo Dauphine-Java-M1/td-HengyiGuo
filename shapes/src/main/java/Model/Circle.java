@@ -1,11 +1,20 @@
-package fr.dauphine.ja.GUOHengyi.shapes;
+package Model;
 
-public class Circle 
+import java.awt.Graphics;
+
+import view.DrawableCircle;
+
+public class Circle extends Shape
 {
-	Point centre;
-	double rayon;
+	private Point centre;
+	private int rayon;
 	
-	public Circle(Point c, double r)
+	public Circle()
+	{
+		this.centre=new Point(0,0);
+		this.rayon=0;
+	}
+	public Circle(Point c, int r)
 	{
 		this.centre=c;
 		this.rayon=r;
@@ -13,16 +22,19 @@ public class Circle
 	
 	public String toString()
 	{
-		return "centre=("+this.centre.x+","+this.centre.y+"),rayon="+this.rayon+",surface="+this.surface();
+		return "centre=("+this.centre.getX()+","+this.centre.getY()+"),rayon="+this.rayon+",surface="+this.surface();
 	}
 	public void translate(int dx,int dy)
 	{
-		this.centre.x=dx;
-		this.centre.y=dy;
+		this.centre=this.centre.translate(dx,dy);
 	}
 	public Point getCenter()
 	{
 		return this.centre;
+	}
+	public int getRayon()
+	{
+		return this.rayon;
 	}
 	public double surface()
 	{
@@ -30,20 +42,26 @@ public class Circle
 	}
 	public boolean contains(Point p)
 	{
-		if(Math.sqrt((Math.pow((p.x-this.centre.x),2)+Math.pow((p.y-this.centre.y),2)))<=this.rayon)
+		if(Math.sqrt((Math.pow((p.getX()-this.centre.getX()),2)+Math.pow((p.getY()-this.centre.getY()),2)))<=this.getRayon())
 			return true;
 		else
 			return false;
 	}
 	public static boolean contains(Point p,Circle c1,Circle c2,Circle c3)
 	{
-		if(Math.sqrt((Math.pow((p.x-c1.centre.x),2)+Math.pow((p.y-c1.centre.y),2)))<=c1.rayon)
+		if(Math.sqrt((Math.pow((p.getX()-c1.centre.getX()),2)+Math.pow((p.getY()-c1.centre.getY()),2)))<=c1.getRayon())
 			return true;
-		else if(Math.sqrt((Math.pow((p.x-c2.centre.x),2)+Math.pow((p.y-c2.centre.y),2)))<=c2.rayon)
+		else if(Math.sqrt((Math.pow((p.getX()-c2.centre.getX()),2)+Math.pow((p.getY()-c2.centre.getY()),2)))<=c2.getRayon())
 			return true;
-		else if(Math.sqrt((Math.pow((p.x-c3.centre.x),2)+Math.pow((p.y-c3.centre.y),2)))<=c3.rayon)
+		else if(Math.sqrt((Math.pow((p.getX()-c3.centre.getX()),2)+Math.pow((p.getY()-c3.centre.getY()),2)))<=c3.getRayon())
 			return true;
 		else
 			return false;	
+	}
+	
+	public void draw(Graphics g)
+	{
+		DrawableCircle dc=new DrawableCircle(this);
+		dc.draw(g);
 	}
 }

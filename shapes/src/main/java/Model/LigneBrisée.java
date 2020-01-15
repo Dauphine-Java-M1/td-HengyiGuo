@@ -1,14 +1,21 @@
-package fr.dauphine.ja.GUOHengyi.shapes;
+package Model;
 
+import java.awt.Graphics;
 import java.util.LinkedList;
 
-public class LigneBrisée 
+import view.DrawableLine;
+
+public class LigneBrisée extends Shape
 {
-	LinkedList<Point> pointlist=new LinkedList<Point>();
+	LinkedList<Point> pointlist;
 	
-	public LigneBrisée(LinkedList<Point> plist)
+	public LinkedList<Point> getLigne()
 	{
-		this.pointlist=plist;
+		return this.pointlist;
+	}
+	public LigneBrisée()
+	{
+		this.pointlist=new LinkedList<Point>();
 	}
 	
 	public void add(Point p) 
@@ -35,5 +42,20 @@ public class LigneBrisée
 				return true;
 		}
 		return false;*/
+	}
+	public void draw(Graphics g)
+	{
+		DrawableLine dl=new DrawableLine(this);
+		dl.draw(g);
+	}
+	@Override
+	public void translate(int x, int y) 
+	{
+		Point p=new Point();
+		for(int i=0;i<pointlist.size();i++)
+		{
+			p=pointlist.get(i);
+			p.translate(x,y);
+		}
 	}
 }
