@@ -9,7 +9,7 @@ import java.util.RandomAccess;
 public class Ex5 {
 
    public static <T> void swap(List<T> l, int i, int j) {
-      if(i >= 0 && j >= 0 && i <= l.size() && j <= l.size()) {
+      if(i >= 0 && j >= 0 && i < l.size() && j < l.size()) {
          T ele_i = l.get(i);
          T ele_j = l.get(j);
          l.set(i, ele_j);
