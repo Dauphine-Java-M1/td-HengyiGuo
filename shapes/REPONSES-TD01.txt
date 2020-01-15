@@ -36,7 +36,7 @@ Ex3-5:Il lance une exception de NullPointerException.Si on a fait un add(null) a
 
 Ex3-6:Le contenu de pointCapacity et de nbPoints devient simplement une valeur retournée par la méthode size() de LinkedList et le contenu de contains devient une valeur retournée par la méthode contains() de LinkedList.
 
-Ex4-1:La signature pour cette méthode est void.
+Ex4-1:La signature pour cette méthode est la classe Point.
 
 Ex4-5:Le code "c2.translate(1,1)" a changé la valeur de p, donc le centre de c a été aussi modifié avec la modification du c2. On crée un autre champs pour le centre de c.
 
