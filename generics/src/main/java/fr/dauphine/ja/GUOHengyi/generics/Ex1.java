@@ -6,7 +6,8 @@ public class Ex1 {
    public static <T extends Comparable<T>> T myMax(T t, T ... ts) {
       T max = t;
       for (T obj : ts) {
-    	  if(max.compareTo(obj)<0) max = obj;
+    	  if(max.compareTo(obj)<0) 
+           max = obj;
       }
       return max;
    }
